@@ -1,0 +1,21 @@
+<td>{{ producto.id }}</td>
+<td>{{ producto.nombre }}</td>
+<td>{{ producto.categoria }}</td>
+
+<td>{{ producto.precioCompra | currency:'EUR' }}</td>
+<td>{{ producto.precioVenta | currency:'EUR' }}</td>
+
+<!-- STOCK CALCULADO -->
+<td>{{ getStock() }}</td>
+
+<td>
+  <button class="btn-editar" (click)="onEditar()">
+    ✏️ Editar
+  </button>
+</td>
+
+<td>
+  <button class="btn-borrar" (click)="onBorrar()">
+    🗑️ Borrar
+  </button>
+</td>

@@ -1,0 +1,72 @@
+/* Título centrado */
+.titulo {
+  text-align: center;
+  font-size: 32px;
+  color: #2f4f2f;
+  margin-bottom: 25px;
+  font-weight: bold;
+}
+
+/* Botón superior */
+.btn-nueva {
+  background-color: #7BBF89;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  font-size: 15px;
+}
+
+.btn-nueva:hover {
+  background-color: #68a878;
+}
+
+/* TABLA estilo PRODUCTOS */
+.tabla {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  margin-top: 10px;
+}
+
+.tabla th {
+  background-color: #f3f3f3; /* Header gris claro como PRODUCTOS */
+  padding: 12px;
+  font-weight: bold;
+  text-align: left;
+  border-bottom: 2px solid #ddd;
+  border-right: 1px solid #ddd;
+}
+
+.tabla td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+}
+
+/* Botones Editar/Borrar */
+.btn-edit {
+  background-color: #A6DCEF;
+  border: 1px solid #7CB8E3;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn-edit:hover {
+  background-color: #7CB8E3;
+}
+
+.btn-delete {
+  background-color: #F7A8A8;
+  border: 1px solid #E47A7A;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn-delete:hover {
+  background-color: #E47A7A;
+}

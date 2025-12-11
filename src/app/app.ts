@@ -1,12 +1,16 @@
 import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterOutlet, RouterLink } from '@angular/router';
 
 @Component({
-  selector: 'app-root',
-  imports: [RouterOutlet],
-  templateUrl: './app.html',
-  styleUrl: './app.css'
+selector: 'app-root',
+standalone: true,
+imports: [
+RouterOutlet, // necesario para <router-outlet>
+RouterLink // necesario para routerLink en <a>
+],
+templateUrl: './app.html',
+styleUrl: './app.css'
 })
 export class App {
-  protected readonly title = signal('floristeria_almacen');
+protected readonly title = signal('floristeria-almacen');
 }

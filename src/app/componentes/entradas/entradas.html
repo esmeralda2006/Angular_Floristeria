@@ -1,0 +1,46 @@
+<h1 class="titulo">📦 Registro de Entradas</h1>
+
+<button class="btn-nueva" (click)="abrirNueva()">➕ Nueva Entrada</button>
+
+<table class="tabla">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Producto</th>
+      <th>Almacén</th>
+      <th>Precio Compra</th>
+      <th>Cantidad</th>
+      <th>Editar</th>
+      <th>Borrar</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    @for (e of entradasActivas(); track e.id) {
+      <tr>
+        <td>{{ e.id }}</td>
+        <td>{{ getProductoNombre(e.productoId) }}</td>
+        <td>{{ e.almacen }}</td>
+        <td>{{ e.precioCompra }} €</td>
+        <td>{{ e.cantidad }}</td>
+
+        <td>
+          <button class="btn-edit" (click)="editar(e)">✏️ Editar</button>
+        </td>
+
+        <td>
+          <button class="btn-delete" (click)="borrar(e.id)">🗑️ Borrar</button>
+        </td>
+      </tr>
+    }
+  </tbody>
+</table>
+
+@if (modalVisible()) {
+  <entrada-formulario
+    [entrada]="entradaActual()"
+    [modo]="modo()"
+    (guardarEvento)="guardarEntrada($event)"
+    (cerrarEvento)="modalVisible.set(false)">
+  </entrada-formulario>
+}

@@ -1,0 +1,33 @@
+<div class="modal-fondo">
+  <div class="modal">
+
+    <h2>{{ modo }}</h2>
+
+    <!-- PRODUCTO -->
+    <label>Producto</label>
+    <select [(ngModel)]="entrada.productoId" (change)="actualizarPrecioCompra()">
+      @for (p of productos(); track p.id) {
+        <option [ngValue]="p.id">{{ p.nombre }}</option>
+      }
+    </select>
+
+    <!-- ALMACÉN -->
+    <label>Almacén</label>
+    <input [(ngModel)]="entrada.almacen">
+
+    <!-- PRECIO COMPRA -->
+    <label>Precio Compra</label>
+    <input type="number" [(ngModel)]="entrada.precioCompra">
+
+    <!-- CANTIDAD -->
+    <label>Cantidad</label>
+    <input type="number" [(ngModel)]="entrada.cantidad">
+
+    <!-- BOTONES -->
+    <div class="acciones">
+      <button class="btn-guardar" (click)="guardar()">Guardar</button>
+      <button class="btn-cancelar" (click)="cerrar()">Cancelar</button>
+    </div>
+
+  </div>
+</div>

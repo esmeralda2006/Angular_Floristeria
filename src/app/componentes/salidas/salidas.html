@@ -1,0 +1,46 @@
+<h1 class="titulo">💐 Registro de Salidas</h1>
+
+<button class="btn-nueva" (click)="abrirNueva()">➕ Nueva Venta</button>
+
+<table class="tabla">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Producto</th>
+      <th>Cliente</th>
+      <th>Precio Venta</th>
+      <th>Cantidad</th>
+      <th>Editar</th>
+      <th>Borrar</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    @for (s of salidasActivas(); track s.id) {
+      <tr class="fila-hover">
+        <td>{{ s.id }}</td>
+        <td>{{ getProductoNombre(s.productoId) }}</td>
+        <td>{{ s.cliente }}</td>
+        <td>{{ s.precioVenta }} €</td>
+        <td>{{ s.cantidad }}</td>
+
+        <td>
+          <button class="btn-edit" (click)="editar(s)">✏️ Editar</button>
+        </td>
+
+        <td>
+          <button class="btn-delete" (click)="borrar(s.id)">🗑️ Borrar</button>
+        </td>
+      </tr>
+    }
+  </tbody>
+</table>
+
+@if (modalVisible()) {
+  <salida-formulario
+    [salida]="salidaActual()"
+    [modo]="modo()"
+    (guardarEvento)="guardarSalida($event)"
+    (cerrarEvento)="modalVisible.set(false)">
+  </salida-formulario>
+}

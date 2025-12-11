@@ -1,0 +1,71 @@
+.tabla-productos {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+}
+
+/* Cabecera igual que Entradas */
+.tabla-productos th {
+  background-color: #f3f3f3;
+  padding: 12px;
+  font-weight: bold;
+  text-align: left;
+  border-bottom: 2px solid #ddd;
+  border-right: 1px solid #ddd;
+}
+
+.tabla-productos td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+}
+
+.btn-anadir {
+  padding: 8px 14px;
+  background-color: #6aa84f;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.btn-ver-almacen {
+  padding: 8px 14px;
+  background-color: #A6DCEF;
+  color: #1E3E5B;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 15px;
+  margin-left: 10px;
+  transition: .25s;
+}
+/* BOTONES SUPERIORES COMO EN ENTRADAS */
+.btn-anadir, .btn-ver-almacen {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  background-color: #7BBF89; /* verde pastel igual que Nueva Entrada */
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 500;
+  transition: 0.25s;
+}
+
+.btn-anadir:hover, 
+.btn-ver-almacen:hover {
+  background-color: #68a878;
+}
+
+.btn-ver-almacen {
+  margin-left: 10px;
+}
+
+.btn-anadir i, .btn-ver-almacen i {
+  font-size: 18px;
+}

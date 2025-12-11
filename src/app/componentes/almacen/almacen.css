@@ -1,0 +1,84 @@
+.titulo {
+  text-align: center;
+  font-size: 32px;
+  color: #2f4f2f;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+
+.almacen-container {
+  width: 95%;
+  margin: auto;
+}
+
+/* TABLA */
+.tabla {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 6px rgba(0,0,0,0.05);
+}
+
+.tabla th {
+  background-color: #f3f3f3;
+  padding: 12px;
+  font-weight: bold;
+  border-bottom: 2px solid #ddd;
+  border-right: 1px solid #ddd;
+}
+
+.tabla td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+}
+
+/* HOVER */
+.tr-hover:hover {
+  background-color: #f0fff0;
+}
+
+/* FILA DE CATEGORÍA */
+.categoria-row {
+  background-color: #E2F9E7;
+  font-weight: bold;
+  font-size: 18px;
+  color: #2f4f2f;
+  border-top: 2px solid #7BBF89;
+}
+
+.categoria-row td {
+  padding: 14px;
+}
+
+/* ESTADOS */
+.estado {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: bold;
+  display: inline-block;
+}
+
+/* SIN STOCK */
+.estado.sin {
+  background: #ffd6d6;
+  color: #b30000;
+  border: 1px solid #b30000;
+}
+
+/* BAJO STOCK (1-2 unidades) */
+.estado.bajo {
+  background: #fff4cc;
+  color: #a66d00;
+  border: 1px solid #a66d00;
+}
+
+/* DISPONIBLE (3 o más unidades) */
+.estado.ok {
+  background: #deffe6;
+  color: #207a2b;
+  border: 1px solid #207a2b;
+}

@@ -1,0 +1,52 @@
+<div class="productos-container">
+
+  <h1 class="titulo">🌿 Gestión de Productos</h1>
+
+  <div class="acciones">
+
+    <button class="btn-anadir" (click)="abrirModalNuevo()">
+      ➕ Añadir Producto
+    </button>
+
+    <button class="btn-ver-almacen" routerLink="/almacen">
+      📦 Ver Almacén
+    </button>
+
+  </div>
+
+  <table class="tabla-productos">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nombre</th>
+        <th>Categoría</th>
+        <th>Compra</th>
+        <th>Venta</th>
+        <th>Stock</th>
+        <th>Editar</th>
+        <th>Borrar</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      @for (p of productos(); track p.id) {
+        <tr producto-linea 
+            [producto]="p"
+            (editarProducto)="abrirModalEditar($event)"
+            (borrarProducto)="servicio.borrarProducto($event)">
+        </tr>
+      }
+    </tbody>
+  </table>
+
+</div>
+
+@if (modalVisible()) {
+  <producto-formulario
+    [producto]="productoActual()"
+    [modo]="productoActual().id === 0 ? 'Nuevo Producto' : 'Editar Producto'"
+    (cerrarModal)="cerrarModal()">
+  </producto-formulario>
+}
+
+

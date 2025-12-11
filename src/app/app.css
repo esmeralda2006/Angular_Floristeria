@@ -1,0 +1,115 @@
+/* ======== FONDO GENERAL ======== */
+body {
+  background-color: #EAF6FF; /* Celeste pastel */
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  color: #333;
+}
+
+/* ======== BARRA DE MENU — Verde Menta Pastel ======== */
+.header {
+  background-color: #B5E8C3; /* Verde menta pastel */
+  padding: 15px;
+  border-bottom: 2px solid #8ECFA3; /* tono más oscuro */
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+.nav-item {
+  text-decoration: none;
+  padding: 10px 18px;
+  background-color: #DFF5E7; /* Verde menta muy suave */
+  border-radius: 8px;
+  font-weight: 600;
+  color: #1E3E5B;
+  transition: 0.25s;
+}
+
+.nav-item:hover {
+  background-color: #8ECFA3; /* Hover verde más intenso */
+  color: white;
+}
+
+.nav-item.active {
+  background-color: #70C48C; /* Verde menta fuerte */
+  color: white;
+}
+
+/* ======== FOOTER — Verde Menta Pastel ======== */
+.footer {
+  background-color: #B5E8C3; /* Igual que header */
+  padding: 10px 20px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  border-top: 2px solid #8ECFA3;
+}
+
+/* ======== TARJETAS DE TABLAS ======== */
+.card {
+  background: white;
+  padding: 20px;
+  width: 95%;
+  margin: 20px auto;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* ======== TABLAS ======== */
+.tabla {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+
+.tabla th {
+  background-color: #D7EDFF;
+  padding: 12px;
+  font-weight: bold;
+}
+
+.tabla td {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+/* ======= BOTONES ======= */
+.btn-nueva {
+  background-color: #7CB8E8;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 15px;
+  transition: .25s;
+}
+.btn-nueva:hover {
+  background-color: #4AA3E0;
+}
+
+.btn-edit {
+  background-color: #A6DCEF;
+  padding: 6px 10px;
+  border: none;
+  border-radius: 6px;
+}
+
+.btn-edit:hover {
+  background-color: #7EBEE3;
+}
+
+.btn-delete {
+  background-color: #F7A8A8;
+  padding: 6px 10px;
+  border: none;
+  border-radius: 6px;
+}
+
+.btn-delete:hover {
+  background-color: #E97C7C;
+}

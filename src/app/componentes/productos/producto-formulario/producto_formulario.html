@@ -1,0 +1,41 @@
+<div class="modal-fondo">
+  <div class="modal">
+
+    <h2>{{ modo }}</h2>
+
+    <form (ngSubmit)="guardar()">
+
+      <!-- NOMBRE -->
+      <label>Nombre</label>
+      <input [(ngModel)]="producto.nombre" name="nombre" required>
+
+      <!-- CATEGORÍA -->
+      <label>Categoría</label>
+      <input [(ngModel)]="producto.categoria" name="categoria" required>
+
+      <!-- PRECIO COMPRA -->
+      <label>Precio Compra</label>
+      <input
+        type="number"
+        [(ngModel)]="producto.precioCompra"
+        name="precioCompra"
+        required>
+
+      <!-- PRECIO VENTA -->
+      <label>Precio Venta</label>
+      <input
+        type="number"
+        [(ngModel)]="producto.precioVenta"
+        name="precioVenta"
+        required>
+
+      <!-- ACCIONES -->
+      <div class="acciones">
+        <button type="submit" class="btn-guardar">Guardar</button>
+        <button type="button" class="btn-cancelar" (click)="cerrar()">Cancelar</button>
+      </div>
+
+    </form>
+
+  </div>
+</div>

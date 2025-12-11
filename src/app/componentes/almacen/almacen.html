@@ -1,0 +1,62 @@
+<h1 class="titulo">🏪 Almacén – Inventario Completo</h1>
+
+<div class="almacen-container">
+
+  <table class="tabla">
+    <thead>
+      <tr>
+        <th>Categoría</th>
+        <th>Producto</th>
+        <th>Stock</th>
+        <th>Compra</th>
+        <th>Venta</th>
+        <th>Estado</th>
+      </tr>
+    </thead>
+
+    <tbody>
+
+      @for (categoria of categoriasLista(); track categoria) {
+
+        <tr class="categoria-row">
+          <td colspan="6">{{ categoria }}</td>
+        </tr>
+
+        @for (p of categoriasMap()[categoria]; track p.id) {
+
+          <tr class="tr-hover">
+
+            <td></td>
+
+            <!-- PRODUCTO -->
+            <td>{{ p.nombre }}</td>
+
+            <!-- STOCK REAL -->
+            <td>{{ stockReal(p.id) }}</td>
+
+            <!-- PRECIOS -->
+            <td>{{ p.precioCompra | currency:'EUR' }}</td>
+            <td>{{ p.precioVenta | currency:'EUR' }}</td>
+
+            <!-- ESTADO -->
+            <td>
+              <span class="estado"
+                [class.sin]="estado(stockReal(p.id)) === 'sin'"
+                [class.bajo]="estado(stockReal(p.id)) === 'bajo'"
+                [class.ok]="estado(stockReal(p.id)) === 'ok'">
+
+                {{ estadoTexto(stockReal(p.id)) }}
+              </span>
+            </td>
+
+          </tr>
+
+        }
+
+      }
+
+    </tbody>
+
+  </table>
+
+</div>

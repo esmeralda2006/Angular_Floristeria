@@ -1,0 +1,38 @@
+td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+}
+
+/* Hover igual que Entradas */
+tr.fila-hover:hover {
+  background-color: #f5f5f5;
+}
+
+/* BOTÓN EDITAR (igual que Entradas) */
+.btn-editar {
+  background-color: #A6DCEF;
+  border: 1px solid #7CB8E3;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn-editar:hover {
+  background-color: #7CB8E3;
+  color: white;
+}
+
+/* BOTÓN BORRAR (igual que Entradas) */
+.btn-borrar {
+  background-color: #F7A8A8;
+  border: 1px solid #E47A7A;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn-borrar:hover {
+  background-color: #E47A7A;
+  color: white;
+}
